@@ -1,0 +1,39 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 12rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid lightgray;
+  border-radius: 11px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
+
+  color: inherit;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.button__icon {
+  position: absolute;
+  margin-left: 0.5rem;
+  right: 0.3rem;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.button__icon--hidden {
+  opacity: 0;
+  transform: translateX(50%);
+}
+
+.button:hover {
+  border-width: 3px;
+  /* border-color: var(--color-red); */
+  background: white;
+  color: var(--color-red);
+  transition: 0.3s ease-in;
+}

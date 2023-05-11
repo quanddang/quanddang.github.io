@@ -1,0 +1,128 @@
+.contact-form {
+  max-width: 100%;
+  padding: 4rem;
+  position: relative;
+  top: -30%;
+}
+
+.contact-form__top-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form__info-item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  background: #444;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 11px;
+  height: 100px;
+  gap: 1rem;
+  transition: background-color 0.2s, transform 0.5s;
+}
+
+.contact-form__info-item:hover {
+  transform: translateY(-7%);
+  background: #555;
+  cursor: pointer;
+}
+
+.contact-form__info-item--icon {
+  font-size: 2rem;
+}
+
+/* Bottom Section */
+.contact-form__bottom-section {
+  background: #222;
+  padding: 2rem;
+  color: #ddd;
+  border-radius: 11px;
+}
+
+.contact-form__title {
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffa500;
+}
+
+.contact-form__middle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form__middle-left,
+.contact-form__middle-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-weight: bold;
+}
+
+.contact-form__input-icon-wrapper {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.contact-form__input-icon {
+  position: absolute;
+  left: 0.5rem;
+  top: 17%;
+  left: 3%;
+  font-size: 20px;
+  pointer-events: none;
+  color: #ffa500;
+}
+
+.contact-form__social {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.contact-form__social--title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffa500;
+}
+
+.contact-form__social--listicons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.contact-form__social--icon {
+  font-size: 3.1rem;
+  padding: 1rem 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 11px;
+}
+
+.contact-form__social--icon:hover {
+  cursor: pointer;
+}
+
+.contact-form__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 60rem) {
+  .contact-form__top-section {
+    flex-direction: column;
+  }
+}

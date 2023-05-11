@@ -1,0 +1,75 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--text);
+  background-image: url('../../assets/vietnam.svg');
+  background-size: 200px;
+  background-position: 90%;
+  background-repeat: no-repeat;
+  border-radius: 11px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 2rem;
+
+  padding: 2rem;
+}
+
+.form__title {
+  color: var(--color-dark);
+}
+
+.form__input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form__input-field,
+.form__message-field {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  width: 25rem;
+  background: transparent;
+  outline: none;
+  padding: 5px 0;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: var(--color-dark);
+}
+
+.form__message-field {
+  font-family: 'Oxygen', sans-serif;
+  resize: none;
+  height: 8rem;
+}
+
+.form__input-field:focus {
+  border-bottom: 2px solid var(--color-orange);
+}
+
+.form__label-input,
+.form__label-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  position: absolute;
+  bottom: 5px;
+
+  font-size: 16px;
+  color: #7a7a7a;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form__label-message {
+  top: -90px;
+}
+
+.form__label--focused {
+  transform: translateY(-28px);
+  color: var(--color-red);
+}

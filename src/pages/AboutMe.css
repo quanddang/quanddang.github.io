@@ -1,0 +1,61 @@
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.about-me__photo img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+}
+
+.about-me__name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.about-me__highlight-main {
+  color: var(--color-orange);
+}
+
+.about-me__role {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7c7c7c;
+  margin-bottom: 1rem;
+}
+
+.about-me__section-title {
+  font-size: 1.3rem;
+  color: var(--color-red);
+}
+
+.about-me__background {
+  list-style: square;
+  padding: 0 0 0 10px;
+}
+
+.about-me__background li {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 45rem) {
+  .about-me__container {
+    flex-direction: row;
+    padding: 0 4rem;
+  }
+}

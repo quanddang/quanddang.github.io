@@ -1,0 +1,115 @@
+header.sticky .nav {
+  opacity: 1;
+  transition-duration: 0.5s;
+  transition-delay: 0.45s;
+  transform: translateX(0px);
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+
+  gap: 5rem;
+  padding: 0 3rem;
+  z-index: 102;
+
+  transform: translateX(60rem);
+  opacity: 0;
+}
+
+.nav__logo {
+  cursor: pointer;
+}
+
+.nav__link {
+  position: absolute;
+  right: 30px;
+  top: 60px;
+
+  transform: translateX(1000px);
+  transition: all 0.4s ease-in;
+  overflow: hidden;
+}
+
+.nav__link.active {
+  height: 30vh;
+  padding: 6rem;
+
+  background: rgba(247, 148, 18, 0.36);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.6px);
+  -webkit-backdrop-filter: blur(12.6px);
+  border: 1px solid rgba(247, 148, 18, 0.29);
+
+  transform: translateX(0);
+  transition: all 0.4s ease-in;
+}
+
+.nav__link a {
+  transition: 150ms ease-out;
+}
+
+.nav__link a:hover {
+  transition: 150ms ease-out;
+}
+
+.nav__item {
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+
+.nav__menu-icon {
+  padding: 0 0.5rem;
+  font-size: 2.5rem;
+  transition: all 0.3s linear;
+}
+
+.nav__menu-icon:active {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 769px) {
+  .nav__menu-icon {
+    display: none;
+  }
+
+  .nav__link {
+    display: flex;
+    gap: 2rem;
+    top: 0;
+
+    transform: translateX(0%);
+    transition: 0s;
+  }
+
+  .nav__link.active {
+    background: inherit;
+    height: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .nav__item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-red);
+    transition: width 0.5s;
+  }
+
+  .nav__link a:hover .nav__item::after {
+    width: 100%;
+  }
+}

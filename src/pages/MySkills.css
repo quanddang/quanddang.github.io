@@ -1,0 +1,36 @@
+.mySkills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15rem 0 10rem 0;
+}
+
+.mySkills__description {
+  padding: 0 2rem;
+}
+.mySkills__title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.mySkills__line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: white;
+}
+
+.mySkills__title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 1rem;
+}
+
+@media (min-width: 40rem) {
+  .mySkills__description {
+    padding: 0 10rem;
+  }
+}

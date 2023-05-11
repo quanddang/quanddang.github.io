@@ -1,0 +1,9 @@
+.footer {
+  background: var(--color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: var(--text);
+  height: 4rem;
+}

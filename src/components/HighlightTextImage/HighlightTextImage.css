@@ -1,0 +1,54 @@
+.highlight-text-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 20px;
+  margin-bottom: 80px;
+  border-radius: 10px;
+  max-width: 100%;
+  color: #fff;
+}
+
+.highlight-text-image__image {
+  max-width: 350px;
+  height: auto;
+  margin-right: 0;
+  border-radius: 50%;
+}
+
+.highlight-text-image__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+.highlight-text-image__section {
+  margin-bottom: 20px;
+}
+
+.highlight-text-image__title {
+  font-family: 'Raleway', san-serif;
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.highlight-text-image__body {
+  color: var(--color-gray);
+  text-align: left;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .highlight-text-image {
+    flex-direction: row;
+  }
+
+  .highlight-text-image__image {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}

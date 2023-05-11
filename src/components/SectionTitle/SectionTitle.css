@@ -1,0 +1,25 @@
+.section-title__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 5rem 0 3rem 0;
+}
+
+.section-title__line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: white;
+}
+
+.section-title__number {
+  color: var(--color-red);
+}
+
+.section-title__number,
+.section-title__text {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 1rem;
+}

@@ -1,0 +1,86 @@
+.work-history-tabs {
+  display: flex;
+  flex-direction: column;
+  border-radius: 11px;
+  overflow: hidden;
+  margin-top: 10rem;
+}
+
+.work-history-tabs__content {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 11px;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.work-history-tabs__tabs {
+  display: flex;
+  flex-direction: row;
+  background-color: #1c1c1c;
+}
+
+.work-history-tabs__tab {
+  padding: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ddd;
+  cursor: pointer;
+  border-bottom: 1px solid #333;
+}
+
+.work-history-tabs__tab:last-child {
+  border-bottom: none;
+}
+
+.work-history-tabs__tab:hover {
+  background-color: #333;
+}
+
+.work-history-tabs__tab--active {
+  background-color: #444;
+  color: #fff;
+}
+
+.work-history-tabs__description {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #222;
+}
+
+.work-history-tabs__description h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--color-orange);
+}
+
+.work-history-tabs__description h3 {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: var(--color-red);
+}
+
+.work-history-tabs__date {
+  color: var(--color-gray);
+}
+
+.work-history-tabs__description p {
+  line-height: 1.5;
+}
+
+@media (min-width: 45rem) {
+  .work-history-tabs__content {
+    flex-direction: row;
+    padding: 0 5rem;
+  }
+
+  .work-history-tabs__tabs {
+    flex-direction: column;
+    min-width: 12rem;
+    max-width: 12rem;
+  }
+}

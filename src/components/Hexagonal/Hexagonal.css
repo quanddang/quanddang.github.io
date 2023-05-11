@@ -1,0 +1,82 @@
+:root {
+  --Nhexa: 4;
+  --gap: 2vw;
+  --size: 150px;
+}
+@media only screen and (min-width: 1100px) {
+  :root {
+    --Nhexa: 6;
+  }
+}
+@media only screen and (max-width: 600px) {
+  :root {
+    --Nhexa: 2;
+    --size: 180px;
+  }
+
+  .hexagonal {
+    margin-right: calc(var(--size) * 0.3);
+  }
+  .hexagonal__article:hover {
+    transform: translateY(0%);
+  }
+}
+
+.hexagonal {
+  padding-right: calc(var(--size) * 0.5);
+  margin-bottom: 2rem;
+}
+
+.hexagonal__section {
+  display: grid;
+  grid-template-columns: repeat(var(--Nhexa), 1fr);
+  grid-gap: var(--gap);
+
+  margin: calc(var(--size) * 0.5) auto 0;
+  width: calc(var(--size) * calc(var(--Nhexa) - 1));
+}
+
+.hexagonal__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: calc(var(--size) / 2);
+  background: rgb(57, 57, 57);
+  width: var(--size);
+  height: calc(var(--size) / 1.1111111);
+  clip-path: url(#hexagono);
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+
+  transition: 1s;
+}
+
+.hexagonal__article:hover {
+  background: var(--color-red);
+  transform: translateY(-8%);
+  transition: 1s;
+}
+
+.hexagonal__article--even {
+  margin: calc(var(--size) * -0.5) calc(var(--size) * -0.25) 0
+    calc(var(--size) * -0.75);
+}
+
+.hexagonal__icon {
+  font-size: 4rem;
+  color: var(--color-orange);
+}
+
+.hexagonal__text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.hexagonal__title {
+  margin-bottom: calc(var(--size) * 0.55 + var(--gap));
+  padding: 2vh 0;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+}
