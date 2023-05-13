@@ -1,9 +1,18 @@
-.section-title__container {
+.section-title {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin: 5rem 0 3rem 0;
+
+  opacity: 0;
+  transform: var(--transform-translate-out);
+}
+
+.section-title.fade-in {
+  opacity: 1;
+  transform: var(--transform-translate-in);
+  transition: var(--transform-fadein);
 }
 
 .section-title__line {

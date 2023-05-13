@@ -49,6 +49,15 @@
   clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 
   transition: 1s;
+
+  opacity: 0;
+  transform: var(--transform-translate-out);
+}
+
+.hexagonal__article.fade-in {
+  opacity: 1;
+  transform: var(--transform-translate-in);
+  transition: var(--transform-fadein);
 }
 
 .hexagonal__article:hover {

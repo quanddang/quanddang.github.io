@@ -30,12 +30,6 @@
   transition-duration: 0.3s;
 }
 
-.social-bar__section-text {
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-
 .social-bar__line {
   position: absolute;
   top: 110%;

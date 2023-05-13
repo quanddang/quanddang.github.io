@@ -4,11 +4,10 @@ import { AiOutlineLinkedin as Linkedin } from 'react-icons/ai';
 import { SiZalo as Zalo } from 'react-icons/si';
 import './SocialBar.css';
 
-const SocialBar = ({ currentSection }) => {
+const SocialBar = () => {
   return (
     <>
       <div className="social-bar">
-        <div className="social-bar__section-text">{currentSection}</div>
         <div className="social-bar__icons">
           <a href="tel:+84836286069">
             <Phone />

@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import * as THREE from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
 import {
@@ -100,8 +101,10 @@ const SpinningGlobe = () => {
       }}
     >
       <PerspectiveCamera makeDefault pov={75} position={[0, 0, 13]} />
-      <Globe />
-      <Atmosphere />
+      <Suspense fallback={null}>
+        <Globe />
+        <Atmosphere />
+      </Suspense>
       <OrbitControls
         minPolarAngle={Math.PI / 2}
         maxPolarAngle={Math.PI / 2}

@@ -7,13 +7,20 @@ import { HiOutlinePhone as Phone } from 'react-icons/hi';
 import { RiMessengerLine as Messenger } from 'react-icons/ri';
 import { AiOutlineLinkedin as Linkedin } from 'react-icons/ai';
 import { SiZalo as Zalo } from 'react-icons/si';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+  const [fadeRef, inView] = useInView({
+    triggerOnce: true, // Ensures the animation only happens once
+  });
+
+  const descriptionClasses = `contact__description ${inView ? 'fade-in' : ''}`;
+
   return (
     <section className="contact" id="contact">
       <SectionTitle number="04" title="Contact Me" />
 
-      <div className="contact__description">
+      <div ref={fadeRef} className={descriptionClasses}>
         <h1>Let{"'"}s Get in Touch</h1>
         <p>
           If you have any questions, suggestions, or collaboration

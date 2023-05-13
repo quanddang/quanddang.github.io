@@ -1,0 +1,42 @@
+.scrollTop {
+  position: fixed;
+  padding: 10px;
+  width: 27px;
+  height: 27px;
+  bottom: 70px;
+  right: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  cursor: pointer;
+  color: #fff;
+  background: inherit;
+
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.scrollTop:hover {
+  background: var(--color-red);
+  animation: updown 2s infinite;
+}
+
+@keyframes updown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 60rem) {
+  .scrollTop {
+    display: none;
+  }
+}

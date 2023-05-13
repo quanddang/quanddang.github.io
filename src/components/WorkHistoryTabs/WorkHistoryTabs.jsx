@@ -2,39 +2,21 @@ import { useState } from 'react';
 import './WorkHistoryTabs.css';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import Highlight3DImage from '../Highlight3DImage/Highlight3DImage';
-// import HighlightTextImage from '../HighlightTextImage/HighlightTextImage';
-// import career from '../../assets/career.jpg';
-// import SpinningGlobe from '../SpinningGlobe/SpinningGlobe';
+import { useInView } from 'react-intersection-observer';
 
 const WorkHistoryTabs = () => {
-  // const highlights = [
-  //   {
-  //     title: 'Diverse Professional Experiences',
-  //     body: 'My professional journey has taken me through various industries, each offering unique challenges and rewards, allowing me to broaden my horizons.',
-  //   },
-  //   {
-  //     title: 'Developing a Versatile Skill Set',
-  //     body: "Driven by curiosity and a passion for learning, I've switched between fields, gaining a range of skills and perspectives that have enriched my experiences.",
-  //   },
-  //   {
-  //     title: 'Discovering a Passion for Development',
-  //     body: 'It was when I entered the realm of software development that I discovered my true calling. I became captivated by the process of crafting functional and visually appealing applications, as well as solving intricate problems through code.',
-  //   },
-  //   {
-  //     title: 'Embracing the Future as a Developer',
-  //     body: 'Now, I take pride in identifying as a developer and am enthusiastic about furthering my growth in this dynamic and ever-changing field.',
-  //   },
-  // ];
+  let currentDate = new Date();
 
   const workHistory = [
     {
       company: 'BrightSocial',
       position: 'Frontend Developer',
-      startDate: '2018-06-01',
-      endDate: '2020-05-31',
+      startDate: '2022-12-13',
+      endDate: currentDate,
       description: [
+        '- Implementing a variety of responsive designs to ensure compatibility across multiple browsers and devices.',
+        '- Translating designs into efficient, maintainable, and scalable code using NextJS and TailwindCSS',
         '- Collaborating with UX/UI designers to develop responsive and interactive web designs',
-        ' -Translating designs into efficient, maintainable, and scalable code using NextJS and TailwindCSS',
         '- Implementing performance optimizations and ensuring cross-browser compatibility',
         '- Integrating with backend services and APIs for seamless data exchange',
       ],
@@ -45,9 +27,10 @@ const WorkHistoryTabs = () => {
       startDate: '2021-11-18',
       endDate: '2023-03-31',
       description: [
-        '- Automating network infrastructure and applications using various programming languages and tools',
+        '- Created an frontend interface with React and backend Django for 802.1X RADIUS system authentication',
+        '- Automating network infrastructure and applications using Python and tools',
         '- Implementing monitoring and analytics tools to optimize network performance',
-        ' - Collaborating with development and network teams to design and implement scalable network solutions',
+        '- Collaborating with development and network teams to design and implement scalable network solutions',
         '- Ensuring network security and compliance with industry standards',
       ],
     },
@@ -70,25 +53,29 @@ const WorkHistoryTabs = () => {
       startDate: '2012-08-21',
       endDate: '2017-12-28',
       description: [
-        'Led a team of engineers and designed software architecture.',
-        'Participated in various academic projects and research.',
+        '- Solid foundation in electrical engineering principles, with coursework in areas such as circuit analysis, digital systems, electromagnetics, and power systems.',
+        '- Experience in designing, building, and testing electrical systems and components, as part of both coursework and independent projects.',
+        '- Proficient in programming languages such as C Python enabling me to create efficient software solutions for engineering problems.',
+        '- Developed strong problem-solving skills, with the ability to apply engineering principles to real-world situations.',
+        '- Demonstrated ability to work effectively in team-based projects, contributing to successful completion of complex engineering tasks.',
       ],
     },
   ];
 
   const [activeTab, setActiveTab] = useState(0);
+  const [fadeRef, inView] = useInView({
+    triggerOnce: true, // Ensures the animation only happens once
+  });
+
+  const itemClasses = `work-history-tabs__content ${inView ? 'fade-in' : ''}`;
 
   return (
     <section className="work-history-tabs" id="work">
       <SectionTitle number="02" title="Work Journey" />
-      {/* <SpinningGlobe />
-      <HighlightTextImage
-        imageUrl={career}
-        altText="My Image"
-        highlights={highlights}
-      /> */}
+
       <Highlight3DImage />
-      <div className="work-history-tabs__content">
+
+      <div ref={fadeRef} className={itemClasses}>
         <div className="work-history-tabs__tabs">
           {workHistory.map((job, index) => (
             <div

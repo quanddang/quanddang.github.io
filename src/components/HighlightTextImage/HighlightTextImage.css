@@ -26,6 +26,15 @@
 
 .highlight-text-image__section {
   margin-bottom: 20px;
+
+  opacity: 0;
+  transform: var(--transform-translate-out);
+}
+
+.highlight-text-image__section.fade-in {
+  opacity: 1;
+  transform: var(--transform-translate-in);
+  transition: var(--transform-fadein);
 }
 
 .highlight-text-image__title {

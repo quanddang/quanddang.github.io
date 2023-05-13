@@ -1,15 +1,30 @@
-import React from 'react';
 import './Highlight3DImage.css';
 import SpinningGlobe from '../SpinningGlobe/SpinningGlobe';
 
-// Dummy Three.js Canvas Component
+import { useInView } from 'react-intersection-observer';
+
+const GridItem = ({ item }) => {
+  const [fadeRef, inView] = useInView({
+    triggerOnce: true, // Ensures the animation only happens once
+  });
+
+  // Apply the 'fade-in' class only once when the component comes into the viewport
+  const itemClasses = `highlight-3d-image__grid ${inView ? 'fade-in' : ''}`;
+
+  return (
+    <div ref={fadeRef} className={itemClasses}>
+      <p className="highlight-3d-image__grid-title">{item.title}</p>
+      <p className="highlight-3d-image__grid-description">{item.description}</p>
+    </div>
+  );
+};
 
 const Highlight3DImage = () => {
   const data = [
     {
       title: 'Diverse Professional Experiences',
       description:
-        'My professional journey has taken me through various industries, each offering unique challenges and rewards, allowing me to broaden my horizons.',
+        'My professional journey has taken me through various countries and industries, each offering unique challenges and rewards, allowing me to broaden my horizons.',
     },
     {
       title: 'Developing a Versatile Skill Set',
@@ -33,12 +48,7 @@ const Highlight3DImage = () => {
       <SpinningGlobe />
       <div className="highlight-3d-image__bottom">
         {data.map((item, index) => (
-          <div key={index} className="highlight-3d-image__grid">
-            <p className="highlight-3d-image__grid-title">{item.title}</p>
-            <p className="highlight-3d-image__grid-description">
-              {item.description}
-            </p>
-          </div>
+          <GridItem key={index} item={item} />
         ))}
       </div>
     </div>

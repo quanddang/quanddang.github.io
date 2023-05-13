@@ -13,6 +13,15 @@
 .highlight-3d-image__grid {
   display: flex;
   flex-direction: column;
+
+  opacity: 0;
+  transform: var(--transform-translate-out);
+}
+
+.highlight-3d-image__grid.fade-in {
+  opacity: 1;
+  transform: var(--transform-translate-in);
+  transition: var(--transform-fadein);
 }
 
 .highlight-3d-image__grid-title {

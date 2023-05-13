@@ -22,6 +22,15 @@
 
   cursor: default;
   transition: 0.5s ease-in-out;
+
+  opacity: 0;
+  transform: var(--transform-translate-out);
+}
+
+.highlights__item.fade-in {
+  opacity: 1;
+  transform: var(--transform-translate-in);
+  transition: var(--transform-fadein);
 }
 
 .highlights__item::before {
