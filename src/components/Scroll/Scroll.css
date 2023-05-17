@@ -1,7 +1,7 @@
 .scroll {
   position: absolute;
   left: 48%;
-  top: 80%;
+  top: 88%;
   z-index: 99;
   cursor: pointer;
 }

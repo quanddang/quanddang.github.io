@@ -1,6 +1,9 @@
 import { HiOutlinePhone as Phone } from 'react-icons/hi';
 import { RiMessengerLine as Messenger } from 'react-icons/ri';
-import { AiOutlineLinkedin as Linkedin } from 'react-icons/ai';
+import {
+  AiOutlineLinkedin as Linkedin,
+  AiOutlineMail as Mail,
+} from 'react-icons/ai';
 import { SiZalo as Zalo } from 'react-icons/si';
 import './SocialBar.css';
 
@@ -11,6 +14,10 @@ const SocialBar = () => {
         <div className="social-bar__icons">
           <a href="tel:+84836286069">
             <Phone />
+          </a>
+
+          <a href="mailto: quanddang@gmail.com">
+            <Mail className="contact__icons" />
           </a>
           <a href="https://www.messenger.com/t/100000690503898">
             <Messenger />
