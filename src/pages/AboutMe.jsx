@@ -3,8 +3,11 @@ import Button from '../components/Button/Button';
 import Highlights from '../components/Highlights';
 import SectionTitle from '../components/SectionTitle/SectionTitle';
 import './AboutMe.css';
+import { useTranslation } from 'react-i18next';
 
 const AboutMe = () => {
+  const { t } = useTranslation();
+
   const handleClick = () => {
     document.getElementById('contact').scrollIntoView();
   };
@@ -16,7 +19,9 @@ const AboutMe = () => {
         <div className="about-me__info">
           <h1 className="about-me__name">
             GREETINGS, MY NAME IS{' '}
-            <span className="about-me__highlight-main">QUAN DANG</span>
+            <span className="about-me__highlight-main">
+              {t('aboutMe.name')}
+            </span>
           </h1>
           <h2 className="about-me__role">FULL STACK DEVELOPER</h2>
           <h3 className="about-me__section-title">Background</h3>

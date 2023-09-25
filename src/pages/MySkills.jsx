@@ -9,7 +9,6 @@ import {
   TbBrandMysql as MySQL,
   TbBrandUbuntu as Ubuntu,
   TbBrandGit as Git,
-  TbSeo as SEO,
   TbBrandHtml5 as HTML5,
   TbBrandCss3 as CSS3,
   TbBrandThreejs as ThreeJS,
@@ -24,6 +23,8 @@ import {
   SiWebgl as WebGL,
   SiInfluxdb as InfluxDB,
   SiRedux as Redux,
+  SiTurborepo as Turborepo,
+  SiEslint as ESlint,
 } from 'react-icons/si';
 import { AiOutlineApi as API } from 'react-icons/ai';
 import design from '../assets/design.jpg';
@@ -41,7 +42,8 @@ function MySkills() {
     { IconComponent: JavaScript, label: 'JavaScript' },
     { IconComponent: ThreeJS, label: 'ThreeJS' },
     { IconComponent: WebGL, label: 'WebGL' },
-    { IconComponent: SEO, label: 'SEO' },
+    { IconComponent: Turborepo, label: 'Turborepo' },
+    { IconComponent: ESlint, label: 'ESLint' },
   ];
 
   const backEndIcons = [
@@ -81,7 +83,7 @@ function MySkills() {
       <SectionTitle number="03" title="My Skills" />
       <HighlightTextImage
         imageUrl={design}
-        altText="My Image"
+        altText="Skills Icon"
         highlights={highlights}
       />
       <Hexagonal title="Frontend Development" icons={frontEndIcons} />

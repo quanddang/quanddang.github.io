@@ -5,12 +5,11 @@ import Highlight3DImage from '../Highlight3DImage/Highlight3DImage';
 import { useInView } from 'react-intersection-observer';
 
 const WorkHistoryTabs = () => {
-  // let currentDate = new Date();
-
   const workHistory = [
     {
-      company: 'BrightSocial',
+      company: 'Epoch Media Group',
       position: 'Frontend Developer',
+      location: 'Remote, US',
       startDate: '12/2022',
       endDate: 'Present',
       description: [
@@ -19,15 +18,17 @@ const WorkHistoryTabs = () => {
         '- Collaborated with backend developers to integrate RESTful APIs,  ensuring seamless data exchange and enhancing application functionality.',
         '- Worked closely with UI/UX designers to translate designs into functional web pages, maintaining brand consistency and standardizing UI elements across the site.',
         '- Implementing codebase refactoring and performance optimizations.',
+        '- Projects worked on: TheEpochTimes, BrightSocial, and Paywall',
       ],
     },
     {
       company: 'VCCorp',
       position: 'DevNet Engineer',
+      location: 'Hanoi, Vietnam',
       startDate: '11/2021',
       endDate: '03/2023',
       description: [
-        '- Created a full stack solution for 802.1X RADIUS user authentication system utilizing ReactJS, Django, NGinx, andMySQL DB.',
+        '- Created a full stack solution for 802.1X RADIUS user authentication system utilizing ReactJS, Django, NGinx, and MySQL DB.',
         '- Automated network infrastructure, implemented monitor and analytics tools to alert and optimize network performance with Python scripts, webhooks, web crawlers, APIs,  Linux servers, and Grafana.',
         '- Built a fleet of Raspberry Pi devices to monitor Access Point quality using Python, and stored data into Prometheus DB.',
         '- Redesigned and overhauled the organization WiFi system to improve performance, capacity, speed, and security.',
@@ -37,6 +38,7 @@ const WorkHistoryTabs = () => {
     {
       company: 'Theatro',
       position: 'WiFi Engineer',
+      location: 'Richardson, Texas US',
       startDate: '01/2018',
       endDate: '04/2021',
       description: [
@@ -50,6 +52,7 @@ const WorkHistoryTabs = () => {
     {
       company: 'University of Texas at Arlington',
       position: 'Bachelor of Science in Electrical Engineering',
+      location: 'Arlington, TX',
       startDate: '08/2012',
       endDate: '12/2017',
       description: [
@@ -91,7 +94,9 @@ const WorkHistoryTabs = () => {
         </div>
         <div className="work-history-tabs__description">
           <h2>{workHistory[activeTab].position}</h2>
-          <h3>{workHistory[activeTab].company}</h3>
+          <h3>
+            {workHistory[activeTab].company} - {workHistory[activeTab].location}
+          </h3>
           <p className="work-history-tabs__date">
             {workHistory[activeTab].startDate}
             {' - '}
