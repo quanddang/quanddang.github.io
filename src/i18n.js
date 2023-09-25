@@ -20,17 +20,37 @@ i18n
       en: {
         translation: {
           aboutMe: {
+            intro: 'Greetings, my name is',
             name: 'Quan Dang',
-            part2: 'Learn React',
+            backgroundTitle: 'Background',
+            background1: 'Web developer based in Hanoi, Vietnam',
+            background2:
+              'As a Full Stack Developer, I have honed my skills across various aspects of web development, from frontend to backend, and have mastered the art of creating seamless user experiences.',
+            background3: `With a strong foundation in HTML, CSS, and JavaScript, I've expanded my expertise to include popular frontend frameworks such as React and NextJS. My experience in backend development includes proficiency in Node.js and Django.`,
+            background4:
+              'My journey as a Full Stack Developer has allowed me to work on various projects, ranging from simple landing pages to complex web applications, positioning me as a versatile professional in the industry.',
+            contact: 'Contact Me',
+          },
+          card: {
+            title1: '',
+            quality1: '',
+            title2: '',
+            quality2: '',
+            title3: '',
+            quality3: '',
+            title4: '',
+            quality4: '',
+            titl5: '',
+            quality5: '',
+            title6: '',
+            quality6: '',
           },
         },
       },
       vi: {
         translation: {
-          aboutMe: {
-            name: 'Đặng Đức Quân',
-            part2: 'Lerne React',
-          },
+          aboutMe: {},
+          card: {},
         },
       },
     },

@@ -3,7 +3,7 @@ import Button from '../components/Button/Button';
 import { FiX, FiMenu } from 'react-icons/fi';
 import './NavBar.css';
 import logo from '../assets/logo.svg';
-import LanguageSwitcher from '../components/LanguageSwitcher/LanguageSwitcher';
+// import LanguageSwitcher from '../components/LanguageSwitcher/LanguageSwitcher';
 
 function NavBar() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -39,7 +39,7 @@ function NavBar() {
         <a href="#mySkills">
           <h3 className="nav__item">03. MY SKILLS</h3>
         </a>
-        <LanguageSwitcher />
+        {/* <LanguageSwitcher /> */}
         <Button text="CONTACT" onClick={handleClick} />
       </div>
 
