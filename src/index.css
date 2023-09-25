@@ -23,6 +23,7 @@ body {
   scroll-behavior: smooth;
   color: var(--text);
   overflow-x: hidden;
+  background-color: var(--color-dark);
 }
 
 .app {

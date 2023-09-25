@@ -38,7 +38,7 @@
 
 @media (min-width: 45rem) {
   .highlight-3d-image {
-    padding: 0 2.2rem;
+    /* padding: 0 2.2rem; */
   }
 
   .highlight-3d-image__bottom {

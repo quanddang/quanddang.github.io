@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -13,6 +13,7 @@
   align-items: center;
   gap: 2rem;
   padding: 0 2rem;
+  width: 100%;
 }
 
 .about-me__photo img {
@@ -30,6 +31,7 @@
 
 .about-me__highlight-main {
   color: var(--color-orange);
+  text-transform: uppercase;
 }
 
 .about-me__role {
@@ -56,6 +58,6 @@
 @media (min-width: 45rem) {
   .about-me__container {
     flex-direction: row;
-    padding: 0 4rem;
+    /* padding: 0 4rem; */
   }
 }
