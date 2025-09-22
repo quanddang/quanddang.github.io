@@ -23,7 +23,7 @@ i18n
             intro: 'Greetings, my name is',
             name: 'Quan Dang',
             backgroundTitle: 'Background',
-            background1: 'Web developer based in Hanoi, Vietnam',
+            background1: 'Web developer based in Ho Chi Minh City, Vietnam',
             background2:
               'As a Full Stack Developer, I have honed my skills across various aspects of web development, from frontend to backend, and have mastered the art of creating seamless user experiences.',
             background3: `With a strong foundation in HTML, CSS, and JavaScript, I've expanded my expertise to include popular frontend frameworks such as React and NextJS. My experience in backend development includes proficiency in Node.js and Django.`,

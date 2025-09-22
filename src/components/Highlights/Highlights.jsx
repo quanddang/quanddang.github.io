@@ -2,7 +2,7 @@ import './Highlights.css';
 
 import { MdOutlineAnimation } from 'react-icons/md';
 import { TbListDetails, TbTruckDelivery } from 'react-icons/tb';
-import { FcSmartphoneTablet } from 'react-icons/fc';
+import { MdGroups } from 'react-icons/md';
 import { AiOutlineApi } from 'react-icons/ai';
 import { useInView } from 'react-intersection-observer';
 import { BiCodeBlock } from 'react-icons/bi';
@@ -32,13 +32,22 @@ const Highlights = () => {
 
   const highlightsData = [
     {
-      icon: <FcSmartphoneTablet size={size} />,
+      icon: <BiCodeBlock size={size} />,
       iconClass: 'highlights__icon',
-      title: 'Responsive',
-      subtitle: 'Web Design',
+      title: 'Efficient',
+      subtitle: 'Coding',
       quality:
-        'I meticulously craft websites that adapt seamlessly to various screen sizes and devices, ensuring a flawless user experience on any platform.',
+        'My code is clean, efficient, and maintainable, ensuring that the backend logic of your application runs smoothly and is easy to work with in the future.',
     },
+    {
+      icon: <MdGroups size={size} />,
+      iconClass: 'highlights__icon',
+      title: 'Collaborative',
+      subtitle: 'Teamwork',
+      quality:
+        'I thrive in collaborative environments, working seamlessly with designers, developers, and stakeholders to ensure every project achieves its full potential.',
+    },
+
     {
       icon: <MdOutlineAnimation size={size} />,
       iconClass: 'highlights__icon',
@@ -70,14 +79,6 @@ const Highlights = () => {
       subtitle: 'Delivery',
       quality:
         "Committed to efficiency without compromising quality, I consistently deliver stunning, high-performing websites within tight timeframes to meet my clients' needs.",
-    },
-    {
-      icon: <BiCodeBlock size={size} />,
-      iconClass: 'highlights__icon',
-      title: 'Efficient',
-      subtitle: 'Coding',
-      quality:
-        'My code is clean, efficient, and maintainable, ensuring that the backend logic of your application runs smoothly and is easy to work with in the future.',
     },
   ];
 

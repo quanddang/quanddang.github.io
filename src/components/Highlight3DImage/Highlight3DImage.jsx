@@ -22,7 +22,7 @@ const GridItem = ({ item }) => {
 const Highlight3DImage = () => {
   const data = [
     {
-      title: 'Diverse Professional Experiences',
+      title: 'International Professional Experiences',
       description:
         'My professional journey has taken me through various countries and industries, each offering unique challenges and rewards, allowing me to broaden my horizons.',
     },

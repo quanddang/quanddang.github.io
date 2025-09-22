@@ -7,23 +7,33 @@ import { useInView } from 'react-intersection-observer';
 const WorkHistoryTabs = () => {
   const workHistory = [
     {
-      company: 'Epoch Media Group',
-      position: 'Frontend Developer',
-      location: 'Remote, US',
-      startDate: '12/2022',
+      company: 'SINA Airborne',
+      position: 'Lead Full-Stack Developer',
+      location: 'Ho Chi Minh City, Vietnam',
+      startDate: '11/2024',
       endDate: 'Present',
       description: [
-        '- Implemented interactive features to social media application using frameworks and libraries including NextJS, TypeScript, Redux, and TailwindCSS, enhancing the user experience and increasing overall user engagement',
-        '- Created scalable, maintainable, and reusable components for future use, leading to greater efficiency and consistency across multiple projects.',
-        '- Collaborated with backend developers to integrate RESTful APIs,  ensuring seamless data exchange and enhancing application functionality.',
-        '- Worked closely with UI/UX designers to translate designs into functional web pages, maintaining brand consistency and standardizing UI elements across the site.',
-        '- Implementing codebase refactoring and performance optimizations.',
-        '- Projects worked on: TheEpochTimes, BrightSocial, and Paywall',
+        '• Led the full lifecycle of an air logistics management platform, from architecture design to deployment and ongoing maintenance.',
+        '• Worked closely with non-technical teams (sales, customer support, operations, accounting) to align business needs with technical design, ensuring usability and measurable business value',
+        '• Delivered key features including: real-time dashboards for operational insights, airline booking and schedule management, role-based authentication and user management',
+        `• Introduced real-time data pipelines that improved decision-making efficiency and reduced manual reporting by 40%.`,
+      ],
+    },
+    {
+      company: 'Epoch Media Group',
+      position: 'Frontend Developer',
+      location: 'Remote, United States',
+      startDate: '12/2022',
+      endDate: '10/2024',
+      description: [
+        '• Spearheaded the development of responsive, interactive features across high-traffic media platforms including newspaper The Epoch Times, social media BrightSocial, and Paywall.',
+        '• Collaborated with UI/UX designers, backend teams, and product managers to ensure seamless feature delivery and brand consistency.',
+        '• Designed and maintained scalable, reusable component libraries with NextJS, TypeScript, Redux, and TailwindCSS — improving development speed across multiple projects.',
       ],
     },
     {
       company: 'VCCorp',
-      position: 'DevNet Engineer',
+      position: 'Network Engineer',
       location: 'Hanoi, Vietnam',
       startDate: '11/2021',
       endDate: '03/2023',
@@ -38,7 +48,7 @@ const WorkHistoryTabs = () => {
     {
       company: 'Theatro',
       position: 'WiFi Engineer',
-      location: 'Richardson, Texas US',
+      location: 'Richardson, United States',
       startDate: '01/2018',
       endDate: '04/2021',
       description: [

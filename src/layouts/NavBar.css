@@ -2,7 +2,7 @@ header.sticky .nav {
   opacity: 1;
   transition-duration: 0.5s;
   transition-delay: 0.45s;
-  transform: translateX(0px);
+  transform: translateY(0); /* fade up */
 }
 
 .nav {
@@ -17,12 +17,21 @@ header.sticky .nav {
   padding: 0 3rem;
   z-index: 102;
 
-  transform: translateX(60rem);
+  transform: translateY(3rem); /* start lower */
   opacity: 0;
+  transition: all 0.6s ease-out;
 }
 
 .nav__logo {
   cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out 0.1s; /* logo fades in first */
+}
+
+header.sticky .nav__logo {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .nav__link {
@@ -31,7 +40,8 @@ header.sticky .nav {
   top: 60px;
   height: 100%;
 
-  transform: translateX(4000px);
+  transform: translateY(2rem);
+  opacity: 0;
   transition: all 0.4s ease-in;
 }
 
@@ -46,8 +56,38 @@ header.sticky .nav {
   -webkit-backdrop-filter: blur(12.6px);
   border: 1px solid rgba(247, 148, 18, 0.29);
 
-  transform: translateX(0);
-  transition: all 0.4s ease-in;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Default state for items */
+.nav__item,
+.nav button {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+}
+
+/* Active state with stagger */
+.nav__link.active .nav__item:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+.nav__link.active .nav__item:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+.nav__link.active .nav__item:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+.nav__link.active button {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
 }
 
 .nav__link a {
@@ -93,8 +133,9 @@ header.sticky .nav {
     gap: 2rem;
     top: 0;
 
-    transform: translateX(0%);
-    transition: 0s;
+    transform: translateY(0);
+    opacity: 1;
+    transition: none;
   }
 
   .nav__link.active {
@@ -104,6 +145,13 @@ header.sticky .nav {
     border: none;
     border-radius: 0;
     box-shadow: none;
+  }
+
+  /* Animate items even in desktop mode */
+  .nav__link .nav__item,
+  .nav__link button {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .nav__item::after {

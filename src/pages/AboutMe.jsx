@@ -1,4 +1,4 @@
-import profilePic from '../assets/profilePic.jpg';
+import profilePic from '../assets/profile-pic.webp';
 import Button from '../components/Button/Button';
 import Highlights from '../components/Highlights';
 import SectionTitle from '../components/SectionTitle/SectionTitle';
