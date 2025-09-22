@@ -13,10 +13,10 @@ const WorkHistoryTabs = () => {
       startDate: '11/2024',
       endDate: 'Present',
       description: [
-        '• Led the full lifecycle of an air logistics management platform, from architecture design to deployment and ongoing maintenance.',
-        '• Worked closely with non-technical teams (sales, customer support, operations, accounting) to align business needs with technical design, ensuring usability and measurable business value',
-        '• Delivered key features including: real-time dashboards for operational insights, airline booking and schedule management, role-based authentication and user management',
-        `• Introduced real-time data pipelines that improved decision-making efficiency and reduced manual reporting by 40%.`,
+        'Led the full lifecycle of an air logistics management platform, from architecture design to deployment and ongoing maintenance.',
+        'Worked closely with non-technical teams (sales, customer support, operations, accounting) to align business needs with technical design, ensuring usability and measurable business value',
+        'Delivered key features including: real-time dashboards for operational insights, airline booking and schedule management, role-based authentication and user management',
+        `Introduced real-time data pipelines that improved decision-making efficiency and reduced manual reporting by 40%.`,
       ],
     },
     {
@@ -26,9 +26,9 @@ const WorkHistoryTabs = () => {
       startDate: '12/2022',
       endDate: '10/2024',
       description: [
-        '• Spearheaded the development of responsive, interactive features across high-traffic media platforms including newspaper The Epoch Times, social media BrightSocial, and Paywall.',
-        '• Collaborated with UI/UX designers, backend teams, and product managers to ensure seamless feature delivery and brand consistency.',
-        '• Designed and maintained scalable, reusable component libraries with NextJS, TypeScript, Redux, and TailwindCSS — improving development speed across multiple projects.',
+        'Spearheaded the development of responsive, interactive features across high-traffic media platforms including newspaper The Epoch Times, social media BrightSocial, and Paywall.',
+        'Collaborated with UI/UX designers, backend teams, and product managers to ensure seamless feature delivery and brand consistency.',
+        'Designed and maintained scalable, reusable component libraries with NextJS, TypeScript, Redux, and TailwindCSS — improving development speed across multiple projects.',
       ],
     },
     {
@@ -38,11 +38,10 @@ const WorkHistoryTabs = () => {
       startDate: '11/2021',
       endDate: '03/2023',
       description: [
-        '- Created a full stack solution for 802.1X RADIUS user authentication system utilizing ReactJS, Django, NGinx, and MySQL DB.',
-        '- Automated network infrastructure, implemented monitor and analytics tools to alert and optimize network performance with Python scripts, webhooks, web crawlers, APIs,  Linux servers, and Grafana.',
-        '- Built a fleet of Raspberry Pi devices to monitor Access Point quality using Python, and stored data into Prometheus DB.',
-        '- Redesigned and overhauled the organization WiFi system to improve performance, capacity, speed, and security.',
-        '- Fixed network problems, assisted end users, and ensured day-to-day network quality for the organization.',
+        'Built a full-stack WiFi 802.1X RADIUS authentication system (ReactJS, Django, MySQL, Nginx).',
+        'Automated infrastructure monitoring using a fleet of Raspberry Pi, Python, Grafana, and Prometheus, improving issue detection and response',
+        'Overhauled the entire company’s WiFi system to enhance performance, capacity, and security, reduced client complaints by 90%.',
+        'Fixed network problems, assisted end users, and ensured day-to-day network quality for the organization.',
       ],
     },
     {
@@ -52,11 +51,10 @@ const WorkHistoryTabs = () => {
       startDate: '01/2018',
       endDate: '04/2021',
       description: [
-        '- Conducted site-surveys and deployed Theatro VoWiFi voice solution to hundreds of large format stores for US enterprises including Walgreen, Macy, Total Wine & More, Home Depot, Cabelas, Neiman Marcus, etc.',
-        '- Troubleshooting connectivity issues and optimizing wireless network performance by analyzing WiFi data logs using various parameters including authentication, roaming, RF coverage, voice quality, interference, packet drops, throughput, transmit power.',
-        '- Provided Access Point design and remediation reports to optimize client WiFi network for high density deployment.',
-        "- Cooperated and communicated with client network engineers to integrate the company's servers and devices into client internal networks.",
-        '- Staying updated on the latest wireless technologies and industry trends to ensure cutting-edge solutions',
+        'Conducted site-surveys and deployed Theatro VoWiFi voice solution to hundreds of large format stores for US enterprises including Walgreen, Macy, Total Wine & More, Home Depot, Cabelas, Neiman Marcus, etc.',
+        'Troubleshooting connectivity issues and optimizing wireless network performance by analyzing WiFi data logs using various parameters including authentication, roaming, RF coverage, voice quality, interference, packet drops, throughput, transmit power.',
+        'Provided Access Point design and remediation reports to optimize client WiFi network for high density deployment.',
+        "Cooperated and communicated with client network engineers to integrate the company's servers and devices into client internal networks.",
       ],
     },
     {
@@ -66,11 +64,11 @@ const WorkHistoryTabs = () => {
       startDate: '08/2012',
       endDate: '12/2017',
       description: [
-        '- Solid foundation in electrical engineering principles, with coursework in areas such as circuit analysis, digital systems, electromagnetics, and power systems.',
-        '- Experience in designing, building, and testing electrical systems and components, as part of both coursework and independent projects.',
-        '- Proficient in programming languages such as C Python enabling me to create efficient software solutions for engineering problems.',
-        '- Developed strong problem-solving skills, with the ability to apply engineering principles to real-world situations.',
-        '- Demonstrated ability to work effectively in team-based projects, contributing to successful completion of complex engineering tasks.',
+        'Solid foundation in electrical engineering principles, with coursework in areas such as circuit analysis, digital systems, electromagnetics, and power systems.',
+        'Experience in designing, building, and testing electrical systems and components, as part of both coursework and independent projects.',
+        'Proficient in programming languages such as C Python enabling me to create efficient software solutions for engineering problems.',
+        'Developed strong problem-solving skills, with the ability to apply engineering principles to real-world situations.',
+        'Demonstrated ability to work effectively in team-based projects, contributing to successful completion of complex engineering tasks.',
       ],
     },
   ];
@@ -113,7 +111,7 @@ const WorkHistoryTabs = () => {
             {workHistory[activeTab].endDate}
           </p>
           {workHistory[activeTab].description.map((line, index) => (
-            <p key={index}>{line}</p>
+            <p key={index}>• {line}</p>
           ))}
         </div>
       </div>
